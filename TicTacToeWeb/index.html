@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div id="controls">
+    <label>Player X:
+      <select id="playerXType">
+        <option value="human" selected>Human</option>
+        <option value="ai">AI</option>
+      </select>
+    </label>
+    <label>Player O:
+      <select id="playerOType">
+        <option value="human">Human</option>
+        <option value="ai" selected>AI</option>
+      </select>
+    </label>
+    <button id="startGame">Start Game</button>
+  </div>
+
+  <div id="game" style="display:none;">
+    <div id="timer">Time: 0s</div>
+    <div id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <div id="message"></div>
+    <div id="win-popup">🎉</div>
+    <button id="restart">Restart Game</button>
+    <button id="rematch">Rematch</button>
+    <div id="history">
+      <h2>Match History</h2>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="moveSound" src="move.wav" preload="auto"></audio>
+  <audio id="winSound" src="win.wav" preload="auto"></audio>
+  <audio id="drawSound" src="draw.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
